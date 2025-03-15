@@ -19,17 +19,6 @@ export default {
 			}
 		},
 		extend: {
-			fontFamily: {
-				sans: [
-					'SF Pro Display',
-					'system-ui',
-					'-apple-system',
-					'BlinkMacSystemFont',
-					'Segoe UI',
-					'Roboto',
-					'sans-serif'
-				],
-			},
 			colors: {
 				border: 'hsl(var(--border))',
 				input: 'hsl(var(--input))',
@@ -93,46 +82,36 @@ export default {
 					from: { opacity: '0' },
 					to: { opacity: '1' }
 				},
-				'fade-up': {
-					from: { 
-						opacity: '0',
-						transform: 'translateY(20px)'
-					},
-					to: { 
-						opacity: '1',
-						transform: 'translateY(0)'
-					}
+				'fade-out': {
+					from: { opacity: '1' },
+					to: { opacity: '0' }
+				},
+				'slide-in': {
+					from: { transform: 'translateY(10px)', opacity: '0' },
+					to: { transform: 'translateY(0)', opacity: '1' }
+				},
+				'slide-out': {
+					from: { transform: 'translateY(0)', opacity: '1' },
+					to: { transform: 'translateY(10px)', opacity: '0' }
 				},
 				'scale-in': {
-					from: { 
-						opacity: '0',
-						transform: 'scale(0.95)'
-					},
-					to: { 
-						opacity: '1',
-						transform: 'scale(1)'
-					}
+					from: { transform: 'scale(0.95)', opacity: '0' },
+					to: { transform: 'scale(1)', opacity: '1' }
 				},
-				'float': {
-					'0%, 100%': { 
-						transform: 'translateY(0)' 
-					},
-					'50%': { 
-						transform: 'translateY(-10px)' 
-					}
+				'blur-in': {
+					from: { filter: 'blur(5px)', opacity: '0' },
+					to: { filter: 'blur(0)', opacity: '1' }
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-in': 'fade-in 0.8s ease-out',
-				'fade-up': 'fade-up 0.8s ease-out',
-				'scale-in': 'scale-in 0.4s ease-out',
-				'float': 'float 6s ease-in-out infinite'
-			},
-			backdropFilter: {
-				'none': 'none',
-				'blur': 'blur(20px)'
+				'fade-in': 'fade-in 0.5s ease-out',
+				'fade-out': 'fade-out 0.5s ease-out',
+				'slide-in': 'slide-in 0.5s ease-out',
+				'slide-out': 'slide-out 0.5s ease-out',
+				'scale-in': 'scale-in 0.4s cubic-bezier(0.16, 1, 0.3, 1)',
+				'blur-in': 'blur-in 0.7s cubic-bezier(0.16, 1, 0.3, 1)'
 			}
 		}
 	},
