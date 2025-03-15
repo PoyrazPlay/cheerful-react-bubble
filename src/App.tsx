@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -7,8 +6,8 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 // Layout components
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import Header from "./components/layout/Header";
+import Footer from "./components/layout/Footer";
 
 // Pages
 import Login from "@/pages/Login";
