@@ -7,22 +7,22 @@ import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
 import { lazy, Suspense } from "react";
 
 // Layout components
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
+import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 
 // Pages
-import Login from "./pages/Login";
-import Home from "./pages/Home";
-import NotFound from "./pages/NotFound";
-import LiveTrade from "./pages/LiveTrade";
-import TodaysTrade from "./pages/TodaysTrade";
-import HistTrades from "./pages/HistTrades";
-import OIDetailed from "./pages/OIDetailed";
-import OISummary from "./pages/OISummary";
-import PCR from "./pages/PCR";
-import OHLCAnalysis from "./pages/OHLCAnalysis";
-import ExecutionLogs from "./pages/ExecutionLogs";
-import StrikeDetail from "./pages/StrikeDetail";
+import Login from "@/pages/Login";
+import Home from "@/pages/Home";
+import NotFound from "@/pages/NotFound";
+import LiveTrade from "@/pages/LiveTrade";
+import TodaysTrade from "@/pages/TodaysTrade";
+import HistTrades from "@/pages/HistTrades";
+import OIDetailed from "@/pages/OIDetailed";
+import OISummary from "@/pages/OISummary";
+import PCR from "@/pages/PCR";
+import OHLCAnalysis from "@/pages/OHLCAnalysis";
+import ExecutionLogs from "@/pages/ExecutionLogs";
+import StrikeDetail from "@/pages/StrikeDetail";
 
 const queryClient = new QueryClient();
 
