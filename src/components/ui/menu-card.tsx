@@ -2,37 +2,40 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { cn } from '@/lib/utils';
+import { ArrowRight } from 'lucide-react';
 
 interface MenuCardProps {
   title: string;
+  description?: string;
   to: string;
   icon?: React.ReactNode;
-  description?: string;
   className?: string;
 }
 
-const MenuCard = ({ title, to, icon, description, className }: MenuCardProps) => {
+const MenuCard = ({ title, description, to, icon, className }: MenuCardProps) => {
   return (
     <Link 
       to={to}
       className={cn(
-        "block p-4 rounded-lg border border-border hover:border-primary/50 transition-all",
-        "hover:shadow-md hover:bg-accent group",
+        "group relative overflow-hidden card-glass p-5 rounded-xl flex items-center gap-4 transition-all duration-300 hover:bg-primary/5 hover:shadow-lg hover:-translate-y-1",
         className
       )}
     >
-      <div className="flex items-start gap-3">
-        {icon && (
-          <div className="p-2 rounded-full bg-primary/10 text-primary group-hover:bg-primary/20 transition-colors">
-            {icon}
-          </div>
-        )}
-        <div className="flex-1">
-          <h3 className="font-medium mb-1 group-hover:text-primary transition-colors">{title}</h3>
-          {description && (
-            <p className="text-sm text-muted-foreground">{description}</p>
-          )}
+      {icon && (
+        <div className="flex-shrink-0 p-3 rounded-lg bg-background shadow-sm group-hover:scale-110 transition-transform duration-300">
+          {icon}
         </div>
+      )}
+      
+      <div className="flex-grow">
+        <h3 className="font-medium text-lg mb-1 group-hover:text-primary transition-colors duration-200">{title}</h3>
+        {description && (
+          <p className="text-muted-foreground text-sm">{description}</p>
+        )}
+      </div>
+      
+      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex-shrink-0">
+        <ArrowRight className="h-5 w-5 text-primary" />
       </div>
     </Link>
   );

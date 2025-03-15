@@ -9,25 +9,25 @@ const Home = () => {
     { 
       title: "Live Trade", 
       path: "/live-trade", 
-      icon: <Activity />,
+      icon: <Activity className="text-blue-500" />,
       description: "Track current trading activity in real-time"
     },
     { 
       title: "Today's Trade", 
       path: "/todays-trade", 
-      icon: <Calendar />,
+      icon: <Calendar className="text-emerald-500" />,
       description: "View trading data for the current day"
     },
     { 
       title: "Historical Trades", 
       path: "/hist-trades", 
-      icon: <History />,
+      icon: <History className="text-amber-500" />,
       description: "Access past trading records and analysis"
     },
     { 
       title: "Execution Logs", 
       path: "/execution-logs", 
-      icon: <FileText />,
+      icon: <FileText className="text-purple-500" />,
       description: "View detailed execution logs and errors"
     }
   ];
@@ -36,25 +36,25 @@ const Home = () => {
     { 
       title: "OHLC Analysis", 
       path: "/ohlc-analysis", 
-      icon: <CandlestickChart />,
+      icon: <CandlestickChart className="text-rose-500" />,
       description: "Candlestick charts and technical indicators"
     },
     { 
       title: "Option Chain", 
       path: "/oi-detailed", 
-      icon: <LineChart />,
+      icon: <LineChart className="text-sky-500" />,
       description: "Detailed option chain analysis"
     },
     { 
       title: "OI Summary", 
       path: "/oi-summary", 
-      icon: <BarChart />,
+      icon: <BarChart className="text-indigo-500" />,
       description: "Open interest summary and insights"
     },
     { 
       title: "PCR View", 
       path: "/pcr", 
-      icon: <PieChart />,
+      icon: <PieChart className="text-orange-500" />,
       description: "Put/Call ratio visualization"
     }
   ];
@@ -64,9 +64,7 @@ const Home = () => {
       title="Welcome to Poyraz Trading System"
       subtitle="Access advanced trading tools and real-time market analysis"
     >
-      <div 
-        className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mx-auto"
-      >
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full max-w-5xl mx-auto">
         <div className="space-y-6">
           <h2 className="text-xl font-medium px-1 flex items-center gap-2 mb-4">
             <Eye className="h-5 w-5 text-primary" />
