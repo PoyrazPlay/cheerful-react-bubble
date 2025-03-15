@@ -1,7 +1,7 @@
 
 import React from 'react';
-import HomeLayout from '@/components/layout/HomeLayout';
-import MenuCard from '@/components/ui/menu-card';
+import HomeLayout from '../components/layout/HomeLayout';
+import MenuCard from '../components/ui/menu-card';
 import { LineChart, BarChart, PieChart, Activity, TrendingUp, Calendar, Eye, History, HelpCircle, FileText, CandlestickChart } from 'lucide-react';
 
 const Home = () => {

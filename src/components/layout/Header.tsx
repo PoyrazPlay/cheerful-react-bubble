@@ -1,4 +1,5 @@
 
+import React from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 
 const Header = () => {
@@ -30,7 +31,7 @@ const Header = () => {
       
       {isLoggedIn && (
         <button 
-          className="btn-destructive flex items-center gap-1.5 py-1.5 px-4"
+          className="bg-destructive text-destructive-foreground hover:bg-destructive/90 rounded px-4 py-2 text-sm font-medium transition-colors"
           onClick={handleLogout}
         >
           Logout
